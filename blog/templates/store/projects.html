@@ -1,0 +1,498 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+<style>
+        .error-message {
+            color: red;
+            font-size: 0.875em;
+        }
+
+        .sent-message {
+            color: green;
+            font-size: 1em;
+        }
+
+        .loading {
+            color: #007bff;
+        }
+
+        #successMessage {
+            display: none;
+            color: green;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+
+
+</style>
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+        <img src="https://www.perkins.org/wp-content/uploads/2023/11/13.png" alt="">
+
+        <div class="container" data-aos="zoom-out">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <h2>Hakimov Muzaffar</h2>
+                    <p>I'm <span class="typed"
+                                 data-typed-items="Web Developer, "></span><span
+                            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Men haqimda</h2>
+            <p>Men backend yo‘nalishida endigina rivojlanayotgan, ishtiyoqi kuchli dasturchiman. Server tomonidagi
+                texnologiyalar va ma’lumotlar bazalari bilan ishlash bo‘yicha asosiy bilimlarga egaman. Shuningdek, HTML
+                va CSS bilan ishlay olaman, hozirda bu sohada o‘z ustimda ishlayapman. Muammolarni hal qilish, yangi
+                texnologiyalarni o‘rganish va foydali loyihalar yaratish menga yoqadi.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4 justify-content-center">
+                <div class="col-lg-4">
+                    <img src="https://media.wired.com/photos/5e59a85635982c0009f6eb8a/master/pass/python-popularity.jpg"
+                         class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 content">
+                    <h2>Web Developer.</h2>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Tug'ilgan kun:</strong>
+                                    <span>27 Mart 2008</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
+                                    <span>////</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Telefon Nomer:</strong>
+                                    <span>+998 (99) 926-65-55</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Shaxar:</strong>
+                                    <span>Toshkent, Uzbekistan</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Yosh:</strong> <span>17</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Daraja:</strong> <span>O'quvchi</span>
+                                </li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
+                                    <span>xakimvmuzaffar@gamil.com</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Frilans:</strong>
+                                    <span>Mavjud</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="py-3">
+                        Men toza, samarali va kengaytiriladigan kod yozishga intilaman. Garchi endi-endi o‘rganayotgan
+                        bo‘lsam-da, amaliy loyihalar va jamoada ishlash orqali o‘z bilimlarimni oshirishga tayyorman.
+                        Frilans ishlariga yoki junior lavozimlarga ochiqman.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <i class="bi bi-emoji-smile"></i>
+                    <div class="stats-item">
+                        <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Baxtli mijozlar</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <i class="bi bi-journal-richtext"></i>
+                    <div class="stats-item">
+                        <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Loyhalar</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <i class="bi bi-headset"></i>
+                    <div class="stats-item">
+                        <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Yordam va o‘rganish vaqti</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+                <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+                    <i class="bi bi-people"></i>
+                    <div class="stats-item">
+                        <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1"
+                              class="purecounter"></span>
+                        <p>Jamoviy ish</p>
+                    </div>
+                </div><!-- End Stats Item -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Ko‘nikmalar</h2>
+            <p>Zamonaviy web texnologiyalarni o‘rganishga qiziqaman. Asosan backend yo‘nalishida ishlayman va HTML/CSS
+                asoslarini yaxshi bilaman.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row skills-content skills-animation">
+
+                <div class="col-lg-6">
+
+                    <div class="progress">
+                        <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                    </div><!-- End Skills Item -->
+
+                    <div class="progress">
+                        <span class="skill"><span>CSS</span> <i class="val">60%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                    </div><!-- End Skills Item -->
+
+                    <div class="progress">
+                        <span class="skill"><span>Python</span> <i class="val">70%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                    </div><!-- End Skills Item -->
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="progress">
+                        <span class="skill"><span>CI/CD o'rganmoqchiman</span> <i class="val">0%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                    </div><!-- End Skills Item -->
+
+                    <div class="progress">
+                        <span class="skill"><span>Microservices Arxitekturasi o'rganmoqchiman</span> <i
+                                class="val">0%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                    </div><!-- End Skills Item -->
+
+                    <div class="progress">
+                        <span class="skill"><span>JavaScript o'rganmoqchiman</span> <i class="val">0%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                 aria-valuemax="100"></div>
+                        </div>
+                    </div><!-- End Skills Item -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Resume</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
+                sit in iste officiis commodi quidem hic quas.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="resume-title">Sumary</h3>
+
+                    <div class="resume-item pb-0">
+                        <h4>Hakimov Muzaffar</h4>
+                        <p><em>Motivatsiyali va o‘sishga intiluvchan junior Python/Django backend dasturchisi. Web
+                            dasturlash va ma’lumotlar bazasi bilan ishlash bo‘yicha tajriba orttirgan. Jamoaviy ishlash,
+                            muammolarni hal qilish va yangi texnologiyalarni tez o‘zlashtirishga qiziqadi.</em></p>
+                        <ul>
+                            <li>O'zbekiston, Toshkent</li>
+                            <li>+998 99 926 65 55</li>
+                            <li>xakimvmuzaffar@gmail.com</li>
+                        </ul>
+                    </div><!-- Edn Resume Item -->
+
+                    <h3 class="resume-title">Education</h3>
+                    <div class="resume-item">
+                        <h4>Kompyuter savodxonligi kursi — MARS IT SCHOOL</h4>
+                        <h5>2023 – 2024</h5>
+                        <p><em>Yo‘nalish: Kompyuter asoslari</em></p>
+                        <p>Tavsif: Operatsion tizimlar, ofis dasturlari, fayl tizimi, kompyuter xavfsizligi
+                            asoslari.</p>
+                    </div><!-- Edn Resume Item -->
+
+                    <div class="resume-item">
+                        <h4>Dasturlash bo‘yicha o‘quv kursi — PROWEB ACADEMY</h4>
+                        <h5>2024 – 2025</h5>
+                        <p><em>Yo‘nalish: Web Dasturlash (Python, Django)</em></p>
+                        <p>Tavsif: TelegramBot, Backend va front-end asoslari, Django framework, ma’lumotlar bazasi,
+                            REST API’lar bilan ishlash.</p>
+
+                    </div><!-- Edn Resume Item -->
+
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="resume-title">Professional Experience</h3>
+                    <div class="resume-item">
+                        <h4>----------------------------------------------------------</h4>
+                        <h5>----------------------------------------------------------</h5>
+                        <p><em>----------------------------------------------------------</em></p>
+                        <ul>
+                            <li>----------------------------------------------------------
+                            </li>
+                            <li>----------------------------------------------------------
+                            </li>
+                            <li>----------------------------------------------------------
+                            </li>
+                            <li>----------------------------------------------------------
+                            </li>
+                        </ul>
+                    </div><!-- Edn Resume Item -->
+
+                    <div class="resume-item">
+                        <h4>----------------------------------------------------------</h4>
+                        <h5>----------------------------------------------------------</h5>
+                        <p><em>----------------------------------------------------------</em></p>
+                        <ul>
+                            <li>----------------------------------------------------------
+                            </li>
+                            <li>----------------------------------------------------------</li>
+                            <li>----------------------------------------------------------</li>
+                            <li>----------------------------------------------------------
+                            </li>
+                        </ul>
+                    </div><!-- Edn Resume Item -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Projects</h2>
+            <p>Har kuni yangi texnologiyalarni o‘rganib, tajriba orttirishga intilaman. Men uchun har bir loyiha — bu
+                o‘sish imkoniyati.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                </ul><!-- End Portfolio Filters -->
+
+
+                <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                    {% for project in projects %}
+                    {% include 'store/components/_project.html' %}
+                    {% empty %}
+                    <p>❌ Hech qanday project yo‘q</p>
+                    {% endfor %}
+                </div><!-- End Portfolio Container -->
+
+
+            </div>
+
+        </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Contact Section -->
+<!--    <section id="contact" class="contact section">-->
+
+<!--        &lt;!&ndash; Section Title &ndash;&gt;-->
+<!--        <div class="container section-title" data-aos="fade-up">-->
+<!--            <h2>Contact</h2>-->
+<!--            <p>Dasturchi uchun eng katta qiyinchilik – bu o'zining imkoniyatlarini cheklamagan bo'lishidir.</p>-->
+<!--        </div>&lt;!&ndash; End Section Title &ndash;&gt;-->
+
+<!--        <div class="container" data-aos="fade" data-aos-delay="100">-->
+
+<!--            <div class="row gy-4">-->
+
+<!--                <div class="col-lg-4">-->
+<!--                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">-->
+<!--                        <i class="bi bi-geo-alt flex-shrink-0"></i>-->
+<!--                        <div>-->
+<!--                            <h3>Address</h3>-->
+<!--                            <p>O'zbekiston, Toshkent</p>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Info Item &ndash;&gt;-->
+
+<!--                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">-->
+<!--                        <i class="bi bi-telephone flex-shrink-0"></i>-->
+<!--                        <div>-->
+<!--                            <h3>Call Us</h3>-->
+<!--                            <p>+998 99 926 65 66</p>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Info Item &ndash;&gt;-->
+
+<!--                    <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">-->
+<!--                        <i class="bi bi-envelope flex-shrink-0"></i>-->
+<!--                        <div>-->
+<!--                            <h3>Email Us</h3>-->
+<!--                            <p>xakimvmuzaffar@gmail.com</p>-->
+<!--                        </div>-->
+<!--                    </div>&lt;!&ndash; End Info Item &ndash;&gt;-->
+
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Contact form at the end &ndash;&gt;-->
+<!--                <div class="col-lg-8">-->
+<!--                    <form action="" method="post" class="php-email-form" data-aos="fade-up"-->
+<!--                          data-aos-delay="200" id="contactForm">-->
+<!--                        {% csrf_token %}-->
+<!--                        <div class="row gy-4">-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                {{ form.name }}-->
+<!--                                {% if form.name.errors %}-->
+<!--                                <div class="error-message">-->
+<!--                                    {% for error in form.name.errors %}-->
+<!--                                    <p>{{ error }}</p>-->
+<!--                                    {% endfor %}-->
+<!--                                </div>-->
+<!--                                {% endif %}-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6">-->
+<!--                                {{ form.email }}-->
+<!--                                {% if form.email.errors %}-->
+<!--                                <div class="error-message">-->
+<!--                                    {% for error in form.email.errors %}-->
+<!--                                    <p>{{ error }}</p>-->
+<!--                                    {% endfor %}-->
+<!--                                </div>-->
+<!--                                {% endif %}-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-12">-->
+<!--                                {{ form.subject }}-->
+<!--                                {% if form.subject.errors %}-->
+<!--                                <div class="error-message">-->
+<!--                                    {% for error in form.subject.errors %}-->
+<!--                                    <p>{{ error }}</p>-->
+<!--                                    {% endfor %}-->
+<!--                                </div>-->
+<!--                                {% endif %}-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-12">-->
+<!--                                {{ form.message }}-->
+<!--                                {% if form.message.errors %}-->
+<!--                                <div class="error-message">-->
+<!--                                    {% for error in form.message.errors %}-->
+<!--                                    <p>{{ error }}</p>-->
+<!--                                    {% endfor %}-->
+<!--                                </div>-->
+<!--                                {% endif %}-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-12 text-center">-->
+<!--                                <div id="successMessage" class="sent-message" style="display:none;">Your message has-->
+<!--                                    been sent successfully!-->
+<!--                                </div>-->
+<!--                                <button type="submit">Send Message</button>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </form>-->
+<!--    <script>-->
+<!--        // JavaScript code for success message hiding after 3 seconds-->
+<!--        document.getElementById("contactForm").onsubmit = function(event) {-->
+<!--            event.preventDefault(); // Prevent the default form submission-->
+
+<!--            // Show the success message-->
+<!--            document.getElementById("successMessage").style.display = "block";-->
+
+<!--            // Hide the success message after 3 seconds-->
+<!--            setTimeout(function() {-->
+<!--                document.getElementById("successMessage").style.display = "none";-->
+<!--            }, 3000);-->
+
+<!--            // Simulate form submission to the backend using AJAX (optional)-->
+<!--            // You can integrate AJAX here to send the data without refreshing the page-->
+<!--        };-->
+<!--    </script>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </section>&lt;!&ndash; /Contact Section &ndash;&gt;-->
+
+</main>
+
+{% endblock main %}
