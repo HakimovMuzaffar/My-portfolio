@@ -21,6 +21,11 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://my-portfolio-k50c.onrender.com'
+]
+
+
 
 
 # Application definition
