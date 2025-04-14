@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-31u8&(+b@zxv&91c7t&x2vh+c)v7!!w#ng1kbnzfkxxmdiu)tp
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'my-portfolio-nxse.onrender.com',
+    'my-portfolio-k50c.onrender.com',
     '127.0.0.1',  # agar lokalda ham ishlayotgan bo‘lsangiz
     'localhost',
 ]
